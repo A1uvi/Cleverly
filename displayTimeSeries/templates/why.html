@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+  <div class="py-vh-5 w-100 overflow-hidden" id="services">
+    <div class="container">
+        <div class="row d-flex justify-content-end">
+  <div class="col-lg-8" data-aos="fade-down"><h2 class="display-6"><b>Why do they fail?</b></h2></div>  
+</div>
+  <div class="row d-flex align-items-center">
+  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+    <span class="h5 fw-lighter">01.</span>
+    <h3 class="py-5 border-top border-dark">They choose the wrong location.</h3>
+    <p> Choosing the wrong location for a renewable energy project can be detrimental to its success. The location where an electricity generator is built ultimately impacts the cost of the power plant as well as where the energy can be used.</p>
+    </a>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+    <span class="h5 fw-lighter">02.</span>
+    <h3 class="py-5 border-top border-dark">They can't get investors.</h3>
+    <p>Renewable energy projects can be capital-intensive, and securing adequate funding can be a challenge. Lack of funding or insufficient returns on investment can lead to project failures, even before the plant is operational. Investors may not invest in products if they do not have the information that proves that renewable energy is crucial.</p>
+    </a>
+  </div>
+  
+  <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+    <span class="h5 fw-lighter">03.</span>
+    <h3 class="py-5 border-top border-dark">The government fails to support them.</h3>
+    <p>Government regulations and policies can have a significant impact on the success of renewable energy projects. A lack of incentive programs can make projects unviable or unprofitable, and the competing endorsement of fossil fuels for electricity generation can increase the supply of cheap energy and therefore decrease the value of using renewable sources.</p>
+    </a>
+    <a href="{{url_for('home')}}" class="btn btn-warning btn-xl shadow me-3 mt-4">NEXT</a>
+  </div>
+  </div>
+  
+    </div>
+  </div>
+  
+</main>
+{% endblock %}

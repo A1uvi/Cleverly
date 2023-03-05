@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <h1><br><br></h1>
+    <div class="container py-vh-3 border-top" data-aos="fade" data-aos-delay="200">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h2 class="display-1 fw-bold mt-5">Data</h2>
+            <p class="lead">Click the buttons to see visualizations of data from the U.S. Energy Information Administration, along with Machine Learning forcasts for the United States... </p>
+            <a href="{{url_for('nation')}}" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">United States of America</a>
+            <p class="lead">and all of its subregions... </p>
+            <a href="{{url_for('region', regionname='New_England')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">New England</a>
+            <a href="{{url_for('region', regionname='Middle_Atlantic')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">Middle Atlantic</a>
+            <a href="{{url_for('region', regionname='East_North_Central')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">East North Central</a>
+            <a href="{{url_for('region', regionname='West_North_Central')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">West North Central</a>
+            <a href="{{url_for('region', regionname='South_Atlantic')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">South Atlantic</a>
+            <a href="{{url_for('region', regionname='East_South_Central')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">East South Central</a>
+            <a href="{{url_for('region', regionname='West_South_Central')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">West South Central</a>
+            <a href="{{url_for('region', regionname='Mountain')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">Mountain</a>
+            <a href="{{url_for('region', regionname='Pacific_Contiguous')}}" class="btn btn-warning btn-xl shadow me-3 rounded-0 my-5">Pacific Contiguous</a>
+            <p class="lead">and all of its states. </p>
+          </div>
+          <div class="col-12 col-lg-8 text-center">
+            <div class="row">
+      <iframe src="https://createaclickablemap.com/map.php?&id=116577&maplocation=false&online=true" width="900" height="525" style="border: none;"></iframe>
+      <script>
+      if (window.addEventListener){
+        window.addEventListener("message", function(event) {
+             if(event.data.length >= 22) {
+                 if( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT")
+                 location = event.data.substr(22);
+                 }}, false);
+        }
+        else if (window.attachEvent){
+            window.attachEvent("message", function(event) {
+                if( event.data.length >= 22) {
+                    if ( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT")
+                    location = event.data.substr(22);
+                    }
+                    }, false); } </script>
+    </main>
+    {% endblock %}

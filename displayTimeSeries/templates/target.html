@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+  <div class="py-vh-5 w-100 overflow-hidden" id="numbers">
+    <div class="container">
+        <div class="row d-flex justify-content-between align-items-center">
+    <div class="col-lg-5">
+    <img src="/static/img/interior11.jpg">
+  </div>
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-12">
+      <h2 class="display-6 mb-5" data-aos="fade-down">Audience: Residential vs Industrial:</h2>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="display-1 fw-bold py-4">39%</div>
+        <p class="text-black-50">39% of electricity sales come from residential areas. To increase their use of electricity that comes from renewable energy sources, we can promote the use of solar panels in individual homes.</p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="display-1 fw-bold py-4">71%</div>
+        <p class="text-black-50">71% of electricity sales come from commercial and industrial sectors. To increase their use of electricity that comes from renewable energy sources, we have to make it more cost efficient and accessible. </p>
+      </div>
+      <p>To make the greatest impact possible, I wanted to find a way to increase the use of renewable energy in the energy industry.</p>
+      <a href="{{url_for('problem')}}" class="btn btn-warning btn-xl shadow me-3 mt-4">NEXT</a>
+    </div>
+  </div>
+  </div>
+  
+    </div>
+  </div>
+</main>
+{% endblock %}

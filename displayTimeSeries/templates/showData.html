@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="py-vh-5 bg-gray-100 w-100 overflow-hidden">
+        <div class="col-1 col-lg-1 text-center">
+        <h3 class="fs-2 fw-light">{{area}} Data: <span class="fw-bold">{{trial}}</h3>
+            <p data-aos="fade-left" data-aos-delay="100">
+                Using Facebook Prophet, I have forecasted the monthly net generation of electricity in {{trial}} until December of 2026.
+            </p>
+        </span></div>
+
+    </div>
+        
+        <div class="container">
+            {%for i in pics%}
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-lg-6">
+                {% if i == 'all_sectors' %}
+                    <img src="/static/img/graphs/0.png" data-aos="fade-left" data-aos-delay="300">
+                {% elif i == 'electric_utility' %}
+                    <img src="/static/img/graphs/1.png" data-aos="fade-left" data-aos-delay="300">
+                {% elif i == 'independent_power_producers' %}
+                <img src="/static/img/graphs/2.png">
+                {% elif i == 'all_commercial' %}
+                <img src="/static/img/graphs/3.png" data-aos="fade-left" data-aos-delay="300">
+                {% elif i == 'all_industrial' %}
+                <img src="/static/img/graphs/4.png" data-aos="fade-left" data-aos-delay="300">
+                {% endif %}
+            </div>
+            <div class="col-lg-4">
+              {% if i == 'all_sectors' %}
+              <p data-aos="fade-left" data-aos-delay="200">
+                <h3 class="py-5 border-top border-dark" data-aos="fade-left">Net Generation of Electricity in All Sectors</h3>
+            </p>
+            {% elif i == 'electric_utility' %}
+            <p data-aos="fade-left" data-aos-delay="200">
+                <h3 class="py-5 border-top border-dark" data-aos="fade-left">Net Generation of Electricity by Electric Utility Companies</h3>
+            </p>
+            {% elif i == 'independent_power_producers' %}
+            <p data-aos="fade-left" data-aos-delay="200">
+                <h3 class="py-5 border-top border-dark" data-aos="fade-left">Net Generation of Electricity by Independent Power Producers</h3>
+            </p>
+            {% elif i == 'all_commercial' %}
+            <p data-aos="fade-left" data-aos-delay="200">
+                <h3 class="py-5 border-top border-dark" data-aos="fade-left">Net Generation of Electricity for Commercial Purposes</h3>
+            </p>
+            {% elif i == 'all_industrial' %}
+            <p data-aos="fade-left" data-aos-delay="200">
+                <h3 class="py-5 border-top border-dark" data-aos="fade-left">Net Generation of Electricity for Industrial Purposes</h3>
+            </p>
+            {% endif %}
+            </div>
+            </div>
+            {% endfor %}
+        <a href="{{url_for('visoptions')}}" class="btn btn-warning btn-xl shadow me-3 mt-4">BACK</a>
+        <br>
+        <br>
+        <br>
+              </div>
+        
+
+      </div>
+
+    {% endblock %}
